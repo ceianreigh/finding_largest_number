@@ -43,6 +43,12 @@ number_2_label.grid(row=0, column=1)
 number_2_entry = tk.Entry(numbers_frame)
 number_2_entry.grid(row=1, column=1)
 
+# number 3
+number_3_label = tk.Label(numbers_frame, text="Enter Number 3:")
+number_3_label.grid(row=0, column=2)
+number_3_entry = tk.Entry(numbers_frame)
+number_3_entry.grid(row=1, column=2)
+
 # ask user to input 3 numbers
 number_1 = int(input("Enter number 1: "))
 number_2 = int(input("Enter number 2: "))
