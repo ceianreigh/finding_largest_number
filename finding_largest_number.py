@@ -4,10 +4,25 @@
 import tkinter as tk
 from tkinter import PhotoImage, messagebox
 
+
 # pseudocode
+def find_biggest_number(number_1_entry, number_2_entry, number_3_entry):
+    # function to show error if the user entered invalid number
+    try:
+        number_1 = int(number_1_entry.get())
+        number_2 = int(number_2_entry.get())
+        number_3 = int(number_3_entry.get())
+    except ValueError:
+        messagebox.showerror(
+            "Input Error",
+            "Please enter valid NUMBERS.",
+        )
+        return
+
+
 window = tk.Tk()
 window.title("Find the Biggest Number")
-window.geometry("500x250")
+window.geometry("500x300")
 
 # heading
 heading = tk.Label(
@@ -28,6 +43,7 @@ subheading.pack()
 frame = tk.Frame(window)
 frame.pack()
 
+# ask user to input 3 numbers
 numbers_frame = tk.LabelFrame(frame, text="Enter 3 Numbers")
 numbers_frame.grid(row=0, column=0, padx=10, pady=10)
 
@@ -54,26 +70,8 @@ find_button = tk.Button(
     frame,
     text="Find",
     font=("Arial", 10),
-    command=lambda: find_biggest_number(),
+    command=lambda: find_biggest_number(number_1_entry, number_2_entry, number_3_entry),
 )
 find_button.grid(row=1, column=0, padx=10, pady=10, columnspan=3, sticky=tk.W + tk.E)
-
-# ask user to input 3 numbers
-number_1 = int(input("Enter number 1: "))
-number_2 = int(input("Enter number 2: "))
-number_3 = int(input("Enter number 3: "))
-
-# find the biggest number using if-else statements
-if number_1 > number_2 and number_1 > number_3:
-    highest_number = number_1
-elif number_2 > number_1 and number_2 > number_3:
-    highest_number = number_2
-elif number_3 > number_1 and number_3 > number_2:
-    highest_number = number_3
-else:
-    highest_number = "none. All numbers are equal."
-
-# print the biggest number
-print("The biggest number is", highest_number)
 
 window.mainloop()
