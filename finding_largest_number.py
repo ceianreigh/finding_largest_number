@@ -17,6 +17,10 @@ def find_biggest_number(number_1_entry, number_2_entry, number_3_entry):
             "Input Error",
             "Please enter valid NUMBERS.",
         )
+
+        number_1_entry.delete(0, tk.END)
+        number_2_entry.delete(0, tk.END)
+        number_3_entry.delete(0, tk.END)
         return
 
     # find the biggest number
