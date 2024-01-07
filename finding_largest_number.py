@@ -43,7 +43,7 @@ def find_biggest_number(number_1_entry, number_2_entry, number_3_entry):
 
 window = tk.Tk()
 window.title("Find the Biggest Number")
-window.geometry("500x260")
+window.geometry("500x270")
 background_image = PhotoImage(
     file="D:/Programming Logic and Design/finding_largest_number/PLD #4.png"
 )
@@ -54,7 +54,7 @@ background_label.place(relwidth=1, relheight=1)
 heading = tk.Label(
     window,
     text="Find the Biggest Number",
-    font=("Cooper Black", 20),
+    font=("INTRO", 20),
     fg="#D2AE56",
     bg="#443C3B",
 )
@@ -64,7 +64,7 @@ heading.pack()
 subheading = tk.Label(
     window,
     text="Finding the biggest number from the 3 numbers entered",
-    font=("Arial Bold Italic", 12),
+    font=("Eras Demi ITC", 12),
     bg="#443C3B",
     fg="#5A9B8D",
 )
@@ -74,23 +74,31 @@ frame = tk.Frame(window, bg="#C6C7BF")
 frame.pack(pady=10)
 
 # ask user to input 3 numbers
-numbers_frame = tk.LabelFrame(frame, text="Enter 3 Numbers", bg="#D2AE56")
+numbers_frame = tk.LabelFrame(
+    frame, text="Enter 3 Numbers", font=("Eras Demi ITC", 10), bg="#D2AE56"
+)
 numbers_frame.grid(row=0, column=0, padx=10, pady=10)
 
 # number 1
-number_1_label = tk.Label(numbers_frame, text="Enter Number 1:", bg="#D2AE56")
+number_1_label = tk.Label(
+    numbers_frame, text="Enter Number 1:", font=("Arial", 11), bg="#D2AE56"
+)
 number_1_label.grid(row=0, column=0, padx=10, pady=5)
 number_1_entry = tk.Entry(numbers_frame)
 number_1_entry.grid(row=1, column=0, padx=10, pady=5)
 
 # number 2
-number_2_label = tk.Label(numbers_frame, text="Enter Number 2:", bg="#D2AE56")
+number_2_label = tk.Label(
+    numbers_frame, text="Enter Number 2:", font=("Arial", 11), bg="#D2AE56"
+)
 number_2_label.grid(row=0, column=1, padx=10, pady=5)
 number_2_entry = tk.Entry(numbers_frame)
 number_2_entry.grid(row=1, column=1, padx=10, pady=5)
 
 # number 3
-number_3_label = tk.Label(numbers_frame, text="Enter Number 3:", bg="#D2AE56")
+number_3_label = tk.Label(
+    numbers_frame, text="Enter Number 3:", font=("Arial", 11), bg="#D2AE56"
+)
 number_3_label.grid(row=0, column=2, padx=10, pady=5)
 number_3_entry = tk.Entry(numbers_frame)
 number_3_entry.grid(row=1, column=2, padx=10, pady=5)
@@ -99,7 +107,7 @@ number_3_entry.grid(row=1, column=2, padx=10, pady=5)
 find_button = tk.Button(
     frame,
     text="Find",
-    font=("Arial", 10),
+    font=("Eras Demi ITC", 12),
     bg="#AD4B2F",
     fg="#FFFFFF",
     command=lambda: find_biggest_number(number_1_entry, number_2_entry, number_3_entry),
@@ -110,7 +118,7 @@ find_button.grid(row=1, column=0, padx=10, pady=5, columnspan=3, sticky=tk.W + t
 exit_button = tk.Button(
     frame,
     text="Exit",
-    font=("Arial", 10),
+    font=("Eras Demi ITC", 12),
     bg="#5A9B8D",
     fg="#FFFFFF",
     command=window.destroy,
