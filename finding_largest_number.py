@@ -28,13 +28,23 @@ subheading.pack()
 # Ask user to input 3 numbers
 # Number 1
 number_1_frame = tk.Frame(window)
-number_1_frame.pack(side=tk.LEFT, pady=10, padx=10)
-number_1_label = tk.Label(number_1_frame, text="Number", font=("Arial", 12))
+number_1_frame.pack(side=tk.LEFT, pady=20, padx=20)
+number_1_label = tk.Label(number_1_frame, text="Enter number", font=("Arial", 12))
 number_1_label.pack(side=tk.TOP)
 number_1_icon_label = tk.Label(number_1_frame, text="1", font=("Times New Roman", 50))
 number_1_icon_label.pack(side=tk.TOP)
 number_1_entry = tk.Entry(number_1_frame)
 number_1_entry.pack(side=tk.TOP)
+
+# Number 2
+number_2_frame = tk.Frame(window)
+number_2_frame.pack(side=tk.LEFT, pady=20, padx=20)
+number_2_label = tk.Label(number_2_frame, text="Enter number", font=("Arial", 12))
+number_2_label.pack(side=tk.TOP)
+number_2_icon_label = tk.Label(number_2_frame, text="2", font=("Times New Roman", 50))
+number_2_icon_label.pack(side=tk.TOP)
+number_2_entry = tk.Entry(number_2_frame)
+number_2_entry.pack(side=tk.TOP)
 
 number_1 = int(input("Enter number 1: "))
 number_2 = int(input("Enter number 2: "))
