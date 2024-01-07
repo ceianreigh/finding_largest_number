@@ -31,10 +31,17 @@ frame.pack()
 numbers_frame = tk.LabelFrame(frame, text="Enter 3 Numbers")
 numbers_frame.grid(row=0, column=0)
 
+# number 1
 number_1_label = tk.Label(numbers_frame, text="Enter Number 1:")
 number_1_label.grid(row=0, column=0)
 number_1_entry = tk.Entry(numbers_frame)
-number_1_entry.grid(row=0, column=1)
+number_1_entry.grid(row=1, column=0)
+
+# number 2
+number_2_label = tk.Label(numbers_frame, text="Enter Number 2:")
+number_2_label.grid(row=0, column=1)
+number_2_entry = tk.Entry(numbers_frame)
+number_2_entry.grid(row=1, column=1)
 
 # ask user to input 3 numbers
 number_1 = int(input("Enter number 1: "))
