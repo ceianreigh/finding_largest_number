@@ -9,6 +9,22 @@ window = tk.Tk()
 window.title("Find the Biggest Number")
 window.geometry("500x300")
 
+# heading
+heading = tk.Label(
+    window,
+    text="Find the Biggest Number",
+    font=("Cooper Black", 20),
+)
+heading.pack(pady=10)
+
+# subheading
+subheading = tk.Label(
+    window,
+    text="Finding the biggest number from the 3 numbers entered",
+    font=("Arial Bold Italic", 12),
+)
+subheading.pack()
+
 # Ask user to input 3 numbers
 number_1 = int(input("Enter number 1: "))
 number_2 = int(input("Enter number 2: "))
