@@ -19,6 +19,16 @@ def find_biggest_number(number_1_entry, number_2_entry, number_3_entry):
         )
         return
 
+    # find the biggest number
+    if number_1 > number_2 and number_1 > number_3:
+        biggest_number = number_1
+    elif number_2 > number_1 and number_2 > number_3:
+        biggest_number = number_2
+    elif number_3 > number_1 and number_3 > number_2:
+        biggest_number = number_3
+    else:
+        biggest_number = "none. All numbers are equal."
+
 
 window = tk.Tk()
 window.title("Find the Biggest Number")
