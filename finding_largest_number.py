@@ -43,7 +43,7 @@ def find_biggest_number(number_1_entry, number_2_entry, number_3_entry):
 
 window = tk.Tk()
 window.title("Find the Biggest Number")
-window.geometry("500x250")
+window.geometry("500x260")
 
 # heading
 heading = tk.Label(
@@ -93,6 +93,15 @@ find_button = tk.Button(
     font=("Arial", 10),
     command=lambda: find_biggest_number(number_1_entry, number_2_entry, number_3_entry),
 )
-find_button.grid(row=1, column=0, padx=10, pady=10, columnspan=3, sticky=tk.W + tk.E)
+find_button.grid(row=1, column=0, padx=10, pady=5, columnspan=3, sticky=tk.W + tk.E)
+
+# exit button
+exit_button = tk.Button(
+    frame,
+    text="Exit",
+    font=("Arial", 10),
+    command=window.destroy,
+)
+exit_button.grid(row=2, column=0, padx=10, pady=5, columnspan=3, sticky=tk.W + tk.E)
 
 window.mainloop()
