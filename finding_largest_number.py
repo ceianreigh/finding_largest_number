@@ -44,6 +44,11 @@ def find_biggest_number(number_1_entry, number_2_entry, number_3_entry):
 window = tk.Tk()
 window.title("Find the Biggest Number")
 window.geometry("500x260")
+background_image = PhotoImage(
+    file="D:/Programming Logic and Design/finding_largest_number/PLD #4.png"
+)
+background_label = tk.Label(window, image=background_image)
+background_label.place(relwidth=1, relheight=1)
 
 # heading
 heading = tk.Label(
@@ -51,7 +56,7 @@ heading = tk.Label(
     text="Find the Biggest Number",
     font=("Cooper Black", 20),
 )
-heading.pack(pady=10)
+heading.pack()
 
 # subheading
 subheading = tk.Label(
@@ -62,7 +67,7 @@ subheading = tk.Label(
 subheading.pack()
 
 frame = tk.Frame(window)
-frame.pack()
+frame.pack(pady=10)
 
 # ask user to input 3 numbers
 numbers_frame = tk.LabelFrame(frame, text="Enter 3 Numbers")
