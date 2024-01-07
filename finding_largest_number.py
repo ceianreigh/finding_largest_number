@@ -32,9 +32,13 @@ def find_biggest_number(number_1_entry, number_2_entry, number_3_entry):
     # print the biggest number
     messagebox.showinfo(
         "Biggest Number",
-        f"The biggest number is {biggest_number}",
+        f"The biggest number is {biggest_number}.",
     )
-    
+
+    # clear the inputs
+    number_1_entry.delete(0, tk.END)
+    number_2_entry.delete(0, tk.END)
+    number_3_entry.delete(0, tk.END)
 
 
 window = tk.Tk()
