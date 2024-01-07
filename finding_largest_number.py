@@ -25,8 +25,11 @@ subheading = tk.Label(
 )
 subheading.pack()
 
-# ask user to input 3 numbers
+frame = tk.Frame(window)
+frame.pack()
 
+
+# ask user to input 3 numbers
 number_1 = int(input("Enter number 1: "))
 number_2 = int(input("Enter number 2: "))
 number_3 = int(input("Enter number 3: "))
