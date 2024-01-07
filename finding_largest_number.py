@@ -25,7 +25,7 @@ subheading = tk.Label(
 )
 subheading.pack()
 
-# Ask user to input 3 numbers
+# ask user to input 3 numbers
 # Number 1
 number_1_frame = tk.Frame(window)
 number_1_frame.pack(side=tk.LEFT, pady=20, padx=20)
@@ -36,7 +36,7 @@ number_1_icon_label.pack(side=tk.TOP)
 number_1_entry = tk.Entry(number_1_frame)
 number_1_entry.pack(side=tk.TOP)
 
-# Number 2
+# number 2
 number_2_frame = tk.Frame(window)
 number_2_frame.pack(side=tk.LEFT, pady=20, padx=20)
 number_2_label = tk.Label(number_2_frame, text="Enter number", font=("Arial", 12))
@@ -46,11 +46,21 @@ number_2_icon_label.pack(side=tk.TOP)
 number_2_entry = tk.Entry(number_2_frame)
 number_2_entry.pack(side=tk.TOP)
 
+# number 3
+number_3_frame = tk.Frame(window)
+number_3_frame.pack(side=tk.LEFT, pady=20, padx=20)
+number_3_label = tk.Label(number_3_frame, text="Enter number", font=("Arial", 12))
+number_3_label.pack(side=tk.TOP)
+number_3_icon_label = tk.Label(number_3_frame, text="3", font=("Times New Roman", 50))
+number_3_icon_label.pack(side=tk.TOP)
+number_3_entry = tk.Entry(number_3_frame)
+number_3_entry.pack(side=tk.TOP)
+
 number_1 = int(input("Enter number 1: "))
 number_2 = int(input("Enter number 2: "))
 number_3 = int(input("Enter number 3: "))
 
-# Find the biggest number using if-else statements
+# find the biggest number using if-else statements
 if number_1 > number_2 and number_1 > number_3:
     highest_number = number_1
 elif number_2 > number_1 and number_2 > number_3:
@@ -60,7 +70,7 @@ elif number_3 > number_1 and number_3 > number_2:
 else:
     highest_number = "none. All numbers are equal."
 
-# Print the biggest number
+# print the biggest number
 print("The biggest number is", highest_number)
 
 window.mainloop()
