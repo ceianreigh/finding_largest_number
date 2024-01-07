@@ -29,10 +29,17 @@ def find_biggest_number(number_1_entry, number_2_entry, number_3_entry):
     else:
         biggest_number = "none. All numbers are equal."
 
+    # print the biggest number
+    messagebox.showinfo(
+        "Biggest Number",
+        f"The biggest number is {biggest_number}",
+    )
+    
+
 
 window = tk.Tk()
 window.title("Find the Biggest Number")
-window.geometry("500x300")
+window.geometry("500x250")
 
 # heading
 heading = tk.Label(
