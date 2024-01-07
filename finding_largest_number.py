@@ -1,7 +1,13 @@
 # Assignment 4
 # Ask user to input 3 numbers. Find and print the biggest number using only if-else statements.
 
+import tkinter as tk
+from tkinter import PhotoImage, messagebox
+
 # pseudocode
+window = tk.Tk()
+window.title("Find the Biggest Number")
+window.geometry("500x300")
 
 # Ask user to input 3 numbers
 number_1 = int(input("Enter number 1: "))
@@ -20,3 +26,5 @@ else:
 
 # Print the biggest number
 print("The biggest number is", highest_number)
+
+window.mainloop()
